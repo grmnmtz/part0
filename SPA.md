@@ -1,8 +1,16 @@
-#title SinglePage Application - Part 0 FullStack Open
+title SinglePage Application webpage Visit - Part 0 FullStack Open
 
--browser-->server: New Note {note (content) and the timestamp (date)} (application/json)
--browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
--server-->browser: {"message":"note created"}
--server-->browser: HTTP STATUS 201 CREATED Response (/notes)
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML-code (spa file)
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+note over browser: browser starts executing js-code -that requests JSON data from server
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{"content":"asd","date":"2021-11-20T13:09:35.728Z"},...]
+note over browser: -browser executes the event handler -that renders notes to display
+end note
 
-![image info](./images/spa.png)
+![image info](./images/spavisit.png)
