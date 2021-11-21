@@ -18,4 +18,4 @@
   -that renders notes to display
   -end note
 
-![image info](./images/newNoteDiagram.png)
+![image info](./images/NewNoteDiagram.png)
